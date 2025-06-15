@@ -1,55 +1,53 @@
-# Fall Prediction Model 🧠🚨
+# Fall Prediction Using Biomedical Sensor Data 🧠📉
 
-A neural network built in Google Colab to predict the risk of a fall using biometric and motion data.
+This project uses machine learning (specifically a neural network) to predict the likelihood of a fall based on biometric sensor inputs such as SpO2, heart rate variability (HRV), sugar levels, and more.
 
-## 📊 Dataset
+## 🔍 What it does
+- Trains a neural network model to classify 3 classes of fall risk
+- Uses early stopping to prevent overfitting
+- Visualizes training vs. validation performance
 
-Includes:
-- `cStick_data.xlsx`  
-  with features:
-  - Distance
-  - Pressure
-  - HRV
-  - Sugar level
-  - SpO2
-  - Accelerometer  
-  and the label:
-  - Fall (3 classes)
+## 🧪 Tech Stack
+- Python, Pandas, NumPy
+- TensorFlow / Keras
+- Matplotlib
+- Scikit-learn
 
-## 🧠 Model
-
-- Built with TensorFlow & Keras
-- Uses early stopping at a specific epoch (34)
-- Includes dropout and L2 regularization
-- Visualizes accuracy/loss per epoch
+## 📁 Files
+- `Fall_Prediction_Model.ipynb`: Model training & evaluation (Colab notebook)
+- `Fall_Prediction_Model.py`: Python script version
+- `cStick_data.xlsx`: Sample dataset
 
 ## 🚀 How to Run
 
-### Option 1: In Google Colab
-1. Open `fall_prediction_model.ipynb` in [Google Colab](https://colab.research.google.com/)
-2. Upload `cStick_data.xlsx`
-3. Run all cells
+### Option 1: Run on Google Colab
+1. Upload the dataset to your Colab session
+2. Open `Fall_Prediction_Model.ipynb`
+3. Run all cells!
 
-### Option 2: Locally
+### Option 2: Run Locally
+1. Clone the repo
+2. Install dependencies:
+   ```bash
+   pip install tensorflow pandas numpy matplotlib scikit-learn
+   ```
 
-```bash
-pip install -r requirements.txt
-jupyter notebook fall_prediction_model.ipynb
-```
-🧪 Dependencies
-```bash
-Copy code
-numpy
-pandas
-scikit-learn
-tensorflow
-matplotlib
-openpyxl
-```
-⚠️ Make sure you don’t push sensitive medical data publicly if this was collected from real-world sources.
+3. Run the script:
 
-🧑‍💻 Author
-Hasi Minduli
+   ```bash
+   python Fall_Prediction_Model.py
+   ```
 
-🪪 License
-MIT License © 2025 Hasi Minduli
+## 📊 Sample Output
+
+> Plots for accuracy and loss over epochs will be shown after training.
+
+## ⚠️ Notes
+
+* Make sure the dataset (`cStick_data.xlsx`) is in the same directory when running the script.
+* This is a prototype for academic/demonstration purposes.
+
+---
+
+Pull requests welcome. 🔧✨
+
